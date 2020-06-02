@@ -16,7 +16,9 @@ app.use(express.urlencoded({ extended: false }));
 
 /* use for sending titles's forms for frontend */
 app.get('/api/forms', function(req, res) {
+
     res.json(items);
+
 })
 
 /* use for sending details of forms for frontend */
@@ -39,36 +41,41 @@ app.get('/api/forms/:id', function(req, res) {
 
 /* use for getting information from frontend */
 app.post('/getData', function(req, res) {
+    console.log(req.body);
+    /*
+        const enteredForm = {
+            nameField: req.body.nameField,
+            valueNameField: req.body.valueNameField,
+            valueNumberField: req.body.valueNumberField,
+            valueDateField: req.body.valueDateField,
+            numberField: req.body.numberField,
+            dateField: req.body.dateField,
+            selectedOptionText: req.body.selectedOptionText,
+            selectedOptionLocation: req.body.selectedOptionLocation,
+            selectText: req.body.selectText,
+            selectLocation: req.body.selectLocation,
+            arr: req.body.arr,
+            shareholders: req.body.shareholders,
+        };
 
-    const enteredForm = {
-        nameField: req.body.nameField,
-        valueNameField: req.body.valueNameField,
-        valueNumberField: req.body.valueNumberField,
-        valueDateField: req.body.valueDateField,
-        numberField: req.body.numberField,
-        dateField: req.body.dateField,
-        selectedOptionText: req.body.selectedOptionText,
-        selectedOptionLocation: req.body.selectedOptionLocation,
-        selectText: req.body.selectText,
-        selectLocation: req.body.selectLocation,
-    };
-
-    if (enteredForm.valueNameField != '') {
-        console.log(enteredForm.nameField + ":" + enteredForm.valueNameField);
-    }
-    if (enteredForm.valueNumberField != '') {
-        console.log(enteredForm.numberField + ":" + enteredForm.valueNumberField);
-    }
-    if (enteredForm.valueDateField != '') {
-        console.log(enteredForm.dateField + ":" + enteredForm.valueDateField);
-    }
-    if (enteredForm.selectedOptionText != '') {
-        console.log(enteredForm.selectText + ":" + enteredForm.selectedOptionText);
-    }
-    if (enteredForm.selectedOptionLocation != '') {
-        console.log(enteredForm.selectLocation + ":" + enteredForm.selectedOptionLocation.lat + " , " + enteredForm.selectedOptionLocation.long);
-    }
-
+        console.log(enteredForm.shareholders)
+        console.log(enteredForm.arr)
+        if (enteredForm.valueNameField != '') {
+            console.log(enteredForm.nameField + ":" + enteredForm.valueNameField);
+        }
+        if (enteredForm.valueNumberField != '') {
+            console.log(enteredForm.numberField + ":" + enteredForm.valueNumberField);
+        }
+        if (enteredForm.valueDateField != '') {
+            console.log(enteredForm.dateField + ":" + enteredForm.valueDateField);
+        }
+        if (enteredForm.selectedOptionText != '') {
+            console.log(enteredForm.selectText + ":" + enteredForm.selectedOptionText);
+        }
+        if (enteredForm.selectedOptionLocation != '') {
+            console.log(enteredForm.selectLocation + ":" + enteredForm.selectedOptionLocation.lat + " , " + enteredForm.selectedOptionLocation.long);
+        }
+    */
 });
 
 app.listen(PORT);

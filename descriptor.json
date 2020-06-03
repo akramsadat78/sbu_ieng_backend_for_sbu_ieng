@@ -22,18 +22,7 @@
                     "name": "Loc",
                     "title": "Your Location",
                     "type": "Location",
-                    "required": false
-                },
-
-                {
-                    "name": "Request_Type",
-                    "title": "Request Type",
-                    "type": "Text",
-                    "options": [
-                        { "label": "Help", "value": "Help" },
-                        { "label": "Info", "value": "Information" },
-                        { "label": "s", "value": "salam" }
-                    ]
+                    "required": true
                 },
                 {
                     "name": "Base_Location",
@@ -42,6 +31,16 @@
                     "options": [
                         { "label": "Base1", "value": { "lat": "1.2", "long": "3.2" } },
                         { "label": "Base2", "value": { "lat": "2.3", "long": "1.434" } }
+                    ],
+                    "required": true
+                },
+                {
+                    "name": "Request_Type",
+                    "title": "Request Type",
+                    "type": "Text",
+                    "options": [
+                        { "label": "Help", "value": "Help" },
+                        { "label": "Info", "value": "Information" }
                     ]
                 }
             ]

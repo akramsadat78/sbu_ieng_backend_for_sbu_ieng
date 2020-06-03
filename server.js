@@ -41,7 +41,11 @@ app.get('/api/forms/:id', function(req, res) {
 
 /* use for getting information from frontend */
 app.post('/getData', function(req, res) {
-    console.log(req.body);
+
+    console.log("\n" + "/* form details */" + "\n")
+    for (var i = 0; i < Object.keys(req.body).length; i++) {
+        console.log(Object.keys(req.body)[i] + " : " + Object.values(req.body)[i])
+    }
 
 });
 
